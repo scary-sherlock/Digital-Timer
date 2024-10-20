@@ -1,0 +1,195 @@
+.digital-timer {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to right, #cffcf1, #defafe);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.timer-container {
+    margin: auto;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: row;
+}
+
+
+.all-controls {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1em;
+    width: 100%;
+}
+
+.timer-display {
+    background-image: url("https://assets.ccbp.in/frontend/react-js/digital-timer-elapsed-bg.png");
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding: 20px;
+    position: relative;
+    transition: transform 0.3s;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 600px;
+    aspect-ratio: 3 / 2;
+}
+
+.timer {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    background-color: #fff;
+    padding: 1em;
+    font-size: 36px;
+}
+
+.timer-display:hover {
+    transform: scale(1.05);
+}
+
+.time {
+    margin: 0;
+    flex-shrink: 1;
+}
+
+.status {
+    font-size: 24px;
+    margin: 10px 0 0;
+    flex-shrink: 1;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+.control-button {
+    background-color: #1e293b;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.control-button:hover {
+    background-color: #0f172a;
+}
+
+.control-icon {
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+}
+
+.timer-limit-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.timer-limit-button {
+    background-color: #1e293b;
+    border: none;
+    border-radius: 50%;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 24px;
+    height: 40px;
+    width: 40px;
+    margin: 0 10px;
+    transition: background-color 0.3s;
+}
+
+.timer-limit-button:hover {
+    background-color: #0f172a;
+}
+
+.timer-limit-value {
+    font-size: 24px;
+    color: #1e293b;
+}
+
+@media (max-width: 1024px) {
+
+    .timer-display {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .timer-container {
+        padding: 10px;
+        flex-direction: column;
+    }
+
+    .timer-display {
+        padding: 10px;
+    }
+
+    .timer {
+        font-size: 28px;
+    }
+
+    .all-controls {
+        gap: 1em;
+    }
+
+    .controls {
+        gap: 10px;
+    }
+
+    .control-button {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+
+    .timer-limit-button {
+        font-size: 20px;
+        height: 35px;
+        width: 35px;
+    }
+
+    .timer-limit-value {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .timer-container {
+        width: 95%;
+        padding: 5px;
+    }
+
+    .timer-display {
+        padding: 5px;
+    }
+
+    .timer {
+        font-size: 24px;
+    }
+
+    .control-button {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+}
